@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <script defer src="js/bootstrap.js"></script>
+    <script defer src="/lib/jquery-1.12.2.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <!-- <nav class="navbar navbar-expand-md navbar bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Carousel</a>
+          <a class="navbar-brand" href="#">Fruit Cocktail</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -24,37 +26,27 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto mb-2 mb-md-0">
-              <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
-                  >Disabled</a
-                >
+            <ul class="navbar-nav mr-auto  mb-2 mb-md-0 ">
+              <li class="nav-item active ">
+                <a class="nav-link" aria-current="page" href="contacto.html"><strong> Contacta con nosotros</strong></a>
               </li>
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> -->
     </header>
     <div
       id="carouselExampleCaptions"
-      class="carousel slide"
+      class="carousel slide position-relative"
       data-bs-ride="false"
     >
+    <div class="app-title">
+      Fruit Cocktail
+    </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="/assets/img/fondo.jpg"
+            src="/assets/img/catFrutas.jpeg"
             class="d-block w-100 imgFondo"
             alt="..."
           />
@@ -86,42 +78,137 @@
       </button>
     </div>
 
-        <div class="container mt-5">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card">
-                <img src="assets/img/masFruta.jpg" class="card-img-top mb-1" alt="Fruta 1">
-                <div class="card-body">
-                  <h5 class="card-title mt-1">Frutas</h5>
-                  <p class="card-text">Aquí encontrarás una gran variedad de frutas frescas y de alta calidad, que van desde las clásicas manzanas y plátanos hasta exóticas mangostas y lichis. 
-                    La sección de frutas es un imán para los clientes que buscan opciones saludables y deliciosas para sus dietas. </p>
-                </div>
+    <section class="fondo1">
+      <div class="row col-md-6 m-auto py-5 text-center">
+        <h1 id="aparece">¿Qué ofrecemos?</p>
+      </div>
+      <div class="container-fluid">
+        <div class="row  text-center">
+          <div class="col">
+            <div class="card">
+              <img src="assets/img/gran-variedad-productos.png" width="200px" class="card-img-top" alt="Fruta 1">
+              <div class="card-body">
+                <h6 class="card-title">Gran variedad de Productos</h6>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img src="assets/img/verduras.jpg" class="card-img-top" alt="Fruta 2">
-                <div class="card-body">
-                  <h5 class="card-title">Verduras</h5>
-                  <p class="card-text">En esta sección, los clientes encontrarán una amplia variedad de verduras frescas y de alta calidad que se pueden utilizar para preparar comidas saludables y deliciosas. Esta sección es especialmente popular entre los clientes que buscan opciones vegetarianas y veganas.</p>
-                </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="assets/img/servicio-rapido.png" width="200px" class="card-img-top" alt="Fruta 2">
+              <div class="card-body">
+                <h6 class="card-title">Servicio Rápido</h6>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img src="assets/img/zumoNaranja.jpeg" class="card-img-top" alt="Fruta 3">
-                <div class="card-body">
-                  <h5 class="card-title">Zumos</h5>
-                  <p class="card-text"> La categoría de zumos es una opción perfecta para aquellas personas que buscan opciones saludables y convenientes para su estilo de vida ocupado. 
-                    En esta sección, los clientes encontrarán una variedad de zumos frescos y recién preparados de diferentes sabores, que son ricos en vitaminas y nutrientes.</p>
-                </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="assets/img/producto-en-24h.png" width="200px" class="card-img-top" alt="Fruta 3">
+              <div class="card-body">
+                <h6 class="card-title">Cualquier producto en 24h</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="assets/img/facil-sistema-pedidos.png" width="200px" class="card-img-top" alt="Fruta 3">
+              <div class="card-body">
+                <h6 class="card-title">Fácil sistema de pedidos</h6>
               </div>
             </div>
           </div>
         </div>
-        
+      </div>
 
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/masFruta.jpg" class="card-img-top mb-1" alt="Fruta 1">
+              <div class="card-body">
+                <h5 class="card-title mt-1">Frutas</h5>
+                <p class="card-text">Aquí encontrarás una gran variedad de frutas frescas y de alta calidad, que van desde las clásicas manzanas y plátanos hasta exóticas mangostas y lichis. 
+                  La sección de frutas es un imán para los clientes que buscan opciones saludables y deliciosas para sus dietas. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/verduras.jpg" class="card-img-top" alt="Fruta 2">
+              <div class="card-body">
+                <h5 class="card-title">Verduras</h5>
+                <p class="card-text">En esta sección, los clientes encontrarán una amplia variedad de verduras frescas y de alta calidad que se pueden utilizar para preparar comidas saludables y deliciosas. 
+                  Este apartado es especialmente popular entre los clientes que buscan opciones vegetarianas y veganas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/zumoNaranja.jpeg" class="card-img-top" alt="Fruta 3">
+              <div class="card-body">
+                <h5 class="card-title">Zumos</h5>
+                <p class="card-text"> La categoría de zumos es una opción perfecta para aquellas personas que buscan opciones saludables y convenientes para su estilo de vida ocupado. 
+                  En esta sección, los clientes encontrarán una variedad de zumos frescos y recién preparados de diferentes sabores, que son ricos en vitaminas y nutrientes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+<div class="container-fluid bg-light py-5">
+  <div class="col-md-6 m-auto text-center">
+      <h1 class="h1">¿Dónde estamos?</h1>
+      <p class="text-start mt-5">
+        Puedes encontrarnos en la dirección de se muestra debajo en el siguiente turno:<br><br>
+        -Lunes-Viernes: 8:00 a 19:00<br>
+        -Sábados: 8:00 a 14:00<br>
+        -Domingos: Cerrado<br><br>
+        Recuerda que durante los días festivos importantes, también ajustamos nuestro horario de acuerdo a la demanda. ¡Esperamos verte pronto en nuestra tienda!
+      </p>
+  </div>
+</div>
+
+<div class="container mt-5">
+<div class="row justify-content-center">
+  <div id="mapid" style="width: 50%; height: 300px;"></div>
+</div>
+</div>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+<script>
+  let mymap = L.map('mapid').setView([37.406851, -5.9321853, 17], 17);
+
+  L.tileLayer(
+      'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+          maxZoom: 18,
+          attribution: 'Zay Telmplte | Template Design by <a href="https://templatemo.com/">Templatemo</a> | Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+              '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+              'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+          id: 'mapbox/streets-v11',
+          tileSize: 512,
+          zoomOffset: -1
+      }).addTo(mymap);
+
+  L.marker([37.406851, -5.9321853, 17], 17).addTo(mymap)
+      .bindPopup("<b>Fruit Cocktail</b><br />Location.").openPopup();
+
+  mymap.scrollWheelZoom.disable();
+  mymap.touchZoom.disable();
+</script>
+
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 Company, Inc</p>
+  </footer>
+</div>
   </body>
 </html>

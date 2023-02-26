@@ -1,0 +1,23 @@
+.fondo1{
+    background-image: url("/assets/img/frutasFondo1.jpg");
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.app-title{
+    font-size: 4em;
+    font-weight: bold;
+    padding: 20px 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: -webkit-linear-gradient(#e94f07, #eca409);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
