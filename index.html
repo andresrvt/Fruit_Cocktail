@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <script defer src="js/bootstrap.js"></script>
-    <script defer src="/lib/jquery-1.12.2.min.js"></script>
+    <script defer src="js/custom.js"></script>
+    <script src="lib/jquery-3.6.3.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
   </head>
   <body>
@@ -43,19 +44,27 @@
     <div class="app-title">
       Fruit Cocktail
     </div>
+    
+    <div class="app-description">
+      Esto es una tienda super buena y veras que bien esta la fruta y tal
+    </div>
+
+
+
       <div class="carousel-inner">
+        <div class="opacity-layer"></div>
         <div class="carousel-item active">
           <img
-            src="/assets/img/catFrutas.jpeg"
+            src="assets/img/catFrutas.jpeg"
             class="d-block w-100 imgFondo"
             alt="..."
           />
         </div>
         <div class="carousel-item">
-          <img src="/assets/img/cogiendoFruta.png" class="d-block w-100" alt="..." />
+          <img src="assets/img/cogiendoFruta.png" class="d-block w-100" alt="..." />
         </div>
         <div class="carousel-item">
-          <img src="/assets/img/frutas2.jpg" class="d-block w-100" alt="..." />
+          <img src="assets/img/frutas2.jpg" class="d-block w-100" alt="..." />
         </div>
       </div>
       <button
@@ -80,68 +89,70 @@
 
     <section class="fondo1">
       <div class="row col-md-6 m-auto py-5 text-center">
-        <h1 id="aparece">¿Qué ofrecemos?</p>
+        <h1 class="fade-in">¿Qué ofrecemos?</p>
       </div>
-      <div class="container-fluid">
-        <div class="row  text-center">
+      <div class="container">
+        <div class="row gap-4  text-center">
           <div class="col">
-            <div class="card">
-              <img src="assets/img/gran-variedad-productos.png" width="200px" class="card-img-top" alt="Fruta 1">
+            <div class="card card-product">
+              <img  src="assets/img/gran-variedad-productos.png" width="200px" class="card-img-top card-product-img" alt="Fruta 1">
               <div class="card-body">
-                <h6 class="card-title">Gran variedad de Productos</h6>
+                <h6 class="card-title card-product-title">Gran variedad de Productos</h6>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img src="assets/img/servicio-rapido.png" width="200px" class="card-img-top" alt="Fruta 2">
+            <div class="card  card-product">
+              <img src="assets/img/servicio-rapido.png" width="200px" class="card-img-top card-product-img" alt="Fruta 2">
               <div class="card-body">
-                <h6 class="card-title">Servicio Rápido</h6>
+                <h6 class="card-title card-product-title">Servicio Rápido</h6>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img src="assets/img/producto-en-24h.png" width="200px" class="card-img-top" alt="Fruta 3">
+            <div class="card  card-product">
+              <img src="assets/img/producto-en-24h.png" width="200px" class="card-img-top card-product-img" alt="Fruta 3">
               <div class="card-body">
-                <h6 class="card-title">Cualquier producto en 24h</h6>
+                <h6 class="card-title card-product-title">Cualquier producto en 24h</h6>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img src="assets/img/facil-sistema-pedidos.png" width="200px" class="card-img-top" alt="Fruta 3">
+            <div class="card  card-product">
+              <img src="assets/img/facil-sistema-pedidos.png" width="200px" class="card-img-top card-product-img" alt="Fruta 3">
               <div class="card-body">
-                <h6 class="card-title">Fácil sistema de pedidos</h6>
+                <h6 class="card-title card-product-title">Fácil sistema de pedidos</h6>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+   
+
       <div class="container py-5">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col">
             <div class="card">
               <img src="assets/img/masFruta.jpg" class="card-img-top mb-1" alt="Fruta 1">
               <div class="card-body">
                 <h5 class="card-title mt-1">Frutas</h5>
-                <p class="card-text">Aquí encontrarás una gran variedad de frutas frescas y de alta calidad, que van desde las clásicas manzanas y plátanos hasta exóticas mangostas y lichis. 
+                <p class="card-text py-4">Aquí encontrarás una gran variedad de frutas frescas y de alta calidad, que van desde las clásicas manzanas y plátanos hasta exóticas mangostas y lichis. 
                   La sección de frutas es un imán para los clientes que buscan opciones saludables y deliciosas para sus dietas. </p>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col">
             <div class="card">
               <img src="assets/img/verduras.jpg" class="card-img-top" alt="Fruta 2">
               <div class="card-body">
                 <h5 class="card-title">Verduras</h5>
-                <p class="card-text">En esta sección, los clientes encontrarán una amplia variedad de verduras frescas y de alta calidad que se pueden utilizar para preparar comidas saludables y deliciosas. 
+                <p class="card-text py-4">En esta sección, los clientes encontrarán una amplia variedad de verduras frescas y de alta calidad que se pueden utilizar para preparar comidas saludables y deliciosas. 
                   Este apartado es especialmente popular entre los clientes que buscan opciones vegetarianas y veganas.</p>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col">
             <div class="card">
               <img src="assets/img/zumoNaranja.jpeg" class="card-img-top" alt="Fruta 3">
               <div class="card-body">
@@ -157,7 +168,7 @@
   </div>
 </section>
 <div class="container-fluid bg-light py-5">
-  <div class="col-md-6 m-auto text-center">
+  <div class="col-md-6 m-auto text-center contact-us">
       <h1 class="h1">¿Dónde estamos?</h1>
       <p class="text-start mt-5">
         Puedes encontrarnos en la dirección de se muestra debajo en el siguiente turno:<br><br>

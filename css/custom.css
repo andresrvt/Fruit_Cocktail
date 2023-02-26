@@ -1,23 +1,100 @@
 .fondo1{
-    background-image: url("/assets/img/frutasFondo1.jpg");
+    background-image: url("assets/img/frutasFondo1.jpg");
     background-attachment:fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.app-title{
+.app-title {
     font-size: 4em;
     font-weight: bold;
     padding: 20px 0;
     position: absolute;
+    display: flex;
+    flex-direction: column;
     right: 0;
     left: 0;
-    z-index: 1;
+    z-index: 4;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    background: -webkit-linear-gradient(#e94f07, #eca409);
+    transition: all 2s ease;
+    opacity: 0;
+    color: black;
+/*     background: -webkit-linear-gradient(#5eccff, #00745e);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+}
+
+.app-description {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    left: 0;
+    z-index: 4;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: all 2s ease;
+    opacity: 0;
+    color: black;
+
+/*     background: -webkit-linear-gradient(#eaeaea, #8cdb17);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.opacity-layer {
+    background-color: #ffffff5f;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.contact-us {
+    transition: all 1s linear;
+    opacity: 0;
+    transform: translateY(120px)
+}
+
+.group {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.group > * {
+    box-sizing: border-box;
+    max-width: calc(33.3333% - 10.6667px);
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+.card-product {
+    max-width: 300px;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all .5s cubic-bezier(.49,-0.57,1,.99)
+}
+
+.card-product-title {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0
+}
+.card-product-img {
+    padding: 20px 40px
 }
