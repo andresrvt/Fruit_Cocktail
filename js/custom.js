@@ -1,3 +1,18 @@
+setTimeout(() => {
+  jQuery(".app-description").css({
+    opacity: 1,
+    transform: "translateY(240px)",
+  });
+}, 200);
+
+setTimeout(() => {
+  jQuery(".app-title").css({
+    opacity: 1,
+    transform: "translateY(120px)",
+  });
+}, 500);
+
+
 let animatedContact = false;
 function animateContact() {
   animatedContact = true;
@@ -28,19 +43,6 @@ function animateProducts() {
   });
 }
 
-setTimeout(() => {
-  jQuery(".app-description").css({
-    opacity: 1,
-    transform: "translateY(240px)",
-  });
-}, 200);
-
-setTimeout(() => {
-  jQuery(".app-title").css({
-    opacity: 1,
-    transform: "translateY(120px)",
-  });
-}, 500);
 
 const scrollContact = 1000;
 const scrollProducts = 150;
@@ -73,5 +75,18 @@ $(".card").on("mouseleave", function (el) {
   $(el.currentTarget).css({
     transition: "all 200ms ease-in",
     transform: "scale(1)",
+  });
+});
+
+$(".contactBtn").on("mouseover", function (el) {
+  $(el.currentTarget).css({
+    background:"orange"
+  });
+});
+
+$(".catImg").on("mouseover", function (el) {
+  $(el.currentTarget).css({
+    transition: "all 1000ms ease-in",
+    opacity:1
   });
 });

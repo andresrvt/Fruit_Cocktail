@@ -1,5 +1,12 @@
 .fondo1{
-    background-image: url("assets/img/frutasFondo1.jpg");
+    background-image: url(/assets/img/frutasFondo1.jpg);
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fondo2{
+    background-image: url(/assets/img/verdurasFondo.jpg);
     background-attachment:fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,10 +28,10 @@
     text-align: center;
     transition: all 2s ease;
     opacity: 0;
-    color: black;
-/*     background: -webkit-linear-gradient(#5eccff, #00745e);
+    /* color: black; */
+    background: -webkit-linear-gradient(#051c27, #257063);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
 }
 
 .app-description {
@@ -42,11 +49,11 @@
     text-align: center;
     transition: all 2s ease;
     opacity: 0;
-    color: black;
+    /* color: black; */
 
-/*     background: -webkit-linear-gradient(#eaeaea, #8cdb17);
+    background: -webkit-linear-gradient(#181616, #243609);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
 }
 
 .opacity-layer {
@@ -97,4 +104,8 @@
 }
 .card-product-img {
     padding: 20px 40px
+}
+
+.categories{
+    opacity: 0.2;
 }
